@@ -7,6 +7,20 @@
 	"item": [
 		{
 			"name": "GET Google",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dc7de45a-1227-494f-ab3f-71626bd3381f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -15,7 +29,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "https://google.com",
+					"protocol": "https",
+					"host": [
+						"google",
+						"com"
+					]
 				}
 			},
 			"response": []
